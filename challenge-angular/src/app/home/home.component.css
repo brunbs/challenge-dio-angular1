@@ -1,0 +1,52 @@
+body {
+    width: 80%;
+}
+
+#avatar-pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.addedOn {
+    color:grey;
+    font-size: 12px;
+}
+
+p {
+    margin: 0.5px 0.5px 0.5px 0.5px;
+}
+
+.username {
+    font-size: 16px;
+    color: #4169e1;
+}
+
+.email {
+    font-size: 14px;
+}
+
+.contact {
+    font-size: 14px;
+    color: #4169e1;
+}
+
+.btn {
+    width: 100px;
+}
+
+.head-details {
+    width: 70%;
+}
+
+table {
+    max-width: 100%;
+}
+
+table .head-actions {
+    width: 20%;
+}
+
+table .head-avatar {
+    width: 10%;
+}
