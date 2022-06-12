@@ -19,8 +19,11 @@ export class UserService {
             const index = USERS.findIndex((userIterator: User) => userIterator.id === user.id);
             USERS[index] = user;
         } else {
+            let newId = USERS[USERS.length - 1].id + 1;
+            user.id = newId;
             USERS.push(user);
         }
+        console.log(USERS);
     }
 }
 

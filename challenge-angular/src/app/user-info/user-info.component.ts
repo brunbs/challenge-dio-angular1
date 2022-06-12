@@ -15,7 +15,19 @@ export class UserInfoComponent implements OnInit {
   constructor(private activatedRoute: ActivatedRoute, private userService: UserService) { }
 
   ngOnInit(): void {
-    this.user = this.userService.retrieveById(+this.activatedRoute.snapshot.paramMap.get('id'));
+    if(this.activatedRoute.snapshot.url[1].path === 'new') {
+      this.user = {
+        id: null,
+        name: '',
+        email: '',
+        avatar: '',
+        contact: '',
+        addedOn: null
+      }
+    } else {
+      this.user = this.userService.retrieveById(+this.activatedRoute.snapshot.paramMap.get('id'));
+    }
+    
   }
 
   save(): void {
