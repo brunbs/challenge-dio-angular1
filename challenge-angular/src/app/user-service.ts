@@ -20,7 +20,9 @@ export class UserService {
             USERS[index] = user;
         } else {
             let newId = USERS[USERS.length - 1].id + 1;
+            let date = new Date();
             user.id = newId;
+            user.addedOn = date.toDateString();
             USERS.push(user);
         }
         console.log(USERS);
