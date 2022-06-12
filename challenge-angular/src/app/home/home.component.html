@@ -25,7 +25,7 @@
                     <p class="addedOn">Added on {{user.addedOn}}</p>
                 </td>
                 <td class="align-middle">
-                    <button type="button" class="btn btn-primary me-2">Edit</button>
+                    <a [routerLink]="['/users/info', user.id]" class="btn btn-primary me-2">Edit</a>
                     <button type="button" class="btn btn-danger">Delete</button>
                 </td>
             </tr>

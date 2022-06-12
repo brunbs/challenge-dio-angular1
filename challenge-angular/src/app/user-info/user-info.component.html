@@ -1,1 +1,34 @@
-<p>user-info works!</p>
+<h2> User Info </h2>
+<hr />
+
+<form #userForm="ngForm">
+    <div class="form-group row m-2">
+        <label class="col-sm-2 col-form-label">Name: </label>
+        <div class="col-sm-10">
+            <input [(ngModel)]="user.name" required name="name" #userName="ngModel" class="form-control">
+        </div>
+    </div>
+
+    <div class="form-group row m-2">
+        <label class="col-sm-2 col-form-label">Email: </label>
+        <div class="col-sm-10">
+            <input [(ngModel)]="user.email" required name="email" #userEmail="ngModel" class="form-control">
+        </div>
+    </div>
+
+    <div class="form-group row m-2">
+        <label class="col-sm-2 col-form-label">Contact: </label>
+        <div class="col-sm-10">
+            <input [(ngModel)]="user.contact" name="contact" #userContact="ngModel" class="form-control">
+        </div>
+    </div>
+
+    <div class="form-group row m-2">
+        <label class="col-sm-2 col-form-label">Avatar: </label>
+        <div class="col-sm-10">
+            <input [(ngModel)]="user.avatar" required name="avatar" #userAvatar="ngModel" class="form-control">
+        </div>
+    </div>
+    <button (click)="save()" class="btn btn-primary me-2">Save</button>
+    <button [routerLink]="['/users']" class="btn btn-secondary">Back</button>
+</form>
