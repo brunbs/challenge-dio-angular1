@@ -23,7 +23,7 @@
                     <p class="username">{{user.name}}</p> 
                     <p class="email">{{user.email}}</p>
                     <p class="contact">{{user.contact}}</p> 
-                    <p class="addedOn">Added on {{user.addedOn}}</p>
+                    <p class="addedOn">Added on {{user.addedOn | date: 'dd/MM/yyyy'}}</p>
                 </td>
                 <td class="align-middle">
                     <a [routerLink]="['/users/info', user.id]" class="btn btn-primary me-2">Edit</a>
