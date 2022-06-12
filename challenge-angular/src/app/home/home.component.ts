@@ -18,4 +18,8 @@ export class HomeComponent implements OnInit {
     this.users = this.userService.retrieveAll();
   }
 
+  deleteUserById(id: number): void {
+    this.userService.deleteUserById(id);
+  }
+
 }

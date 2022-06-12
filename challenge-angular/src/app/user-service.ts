@@ -27,6 +27,11 @@ export class UserService {
         }
         console.log(USERS);
     }
+
+    deleteUserById(id: number): void {
+        const index = USERS.findIndex((userIterator) => userIterator.id === id);
+        USERS.splice(index, 1);
+    }
 }
 
 var USERS: User[] = [
